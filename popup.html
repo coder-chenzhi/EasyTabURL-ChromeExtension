@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Get opened tabs URLs</title>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="popup.css" />
+</head>
+<body>
+<div class="container">
+  <div class='row' align="center">
+    <button type="button" id="generate" class="btn btn-primary" aria-label="Left Align">
+        <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> Generate
+    </button>
+    <button type="button" id="copy" class="btn btn-primary disabled" aria-label="Copy">
+        <span class="glyphicon glyphicon-copy" aria-hidden="true"></span> Copy
+    </button>
+    <label class="btn btn-primary btn-file">
+      <span class="glyphicon glyphicon-open" aria-hidden="true"></span> Load
+      <input type="file" style="display: none;" id="load" />
+    </label>
+    <button type="button" id="save" class="btn btn-primary disabled" aria-label="Save">
+        <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Save
+    </button>
+  </div>
+  <div class="alert" id='msg'></div>
+  <div>
+    <table class="table table-striped" id="url-table">
+    </table>
+  </div>
+
+    <textarea id="url-list"></textarea>
+
+</div>
+</body>
+<script type="text/javascript" src='/js/jquery.min.js'></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="TabManager.js"></script>
+</html>

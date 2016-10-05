@@ -1,0 +1,26 @@
+body {
+  height: 500px;
+  width: 400px;
+}
+
+.container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#msg {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+}
+/*
+textarea {
+  height: 80ex;
+  width: 40em;
+}
+*/
+
+#result {
+    font-size: small;
+}
