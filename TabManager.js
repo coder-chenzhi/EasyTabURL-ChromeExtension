@@ -7,12 +7,21 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
+
 function list(tabs) {
   var contents = '';
   for (var i = 0; i < tabs.length; i++) {
     contents += tabs[i].url + '\n';
   }
   $('#url-list').val(contents);
+  create_table(contents);
+}
+
+function create_table(contents) {
+  urls = contents.split('\n');
+  for (var i = urls.length - 1; i >= 0; i--) {
+    $('#url-table').append('<tr><td>' + urls[i] +'</td></tr>');
+  };
 }
 
 document.getElementById("generate").addEventListener('click', function(e) {
@@ -24,6 +33,7 @@ document.getElementById("generate").addEventListener('click', function(e) {
 });
 
 document.getElementById("copy").addEventListener('click', function(e) {
+  /* code here to copy, use a invisible textarea */
   var textarea = $('#url-list');
   textarea.focus();
   var result = document.execCommand('copy');
@@ -45,11 +55,14 @@ document.getElementById("load").addEventListener('change', function(e) {
 
     reader.onload = function(e) {
       $('#url-list').val(reader.result);
+      create_table(reader.result);
     }
 
     reader.readAsText(file);
     $('#copy').removeClass("disabled");
     $('#save').removeClass("disabled");
+    $('#msg').html('File loaded!');
+    $('#msg').addClass("alert-success");
   } else {
     $('#msg').html('File not supported!');
     $('#msg').addClass("alert-danger");

@@ -21,6 +21,6 @@ textarea {
 }
 */
 
-#result {
-    font-size: small;
+#url-list {
+    display: none;
 }
