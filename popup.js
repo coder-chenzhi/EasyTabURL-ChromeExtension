@@ -56,6 +56,10 @@ document.getElementById("load").addEventListener('change', function(e) {
     reader.onload = function(e) {
       $('#url-list').val(reader.result);
       create_table(reader.result);
+      urls = reader.result.split('\n');
+      for (var i = urls.length - 1; i >= 0; i--) {
+        chrome.tabs.create({ url: urls[i] });
+      };
     }
 
     reader.readAsText(file);
@@ -63,6 +67,7 @@ document.getElementById("load").addEventListener('change', function(e) {
     $('#save').removeClass("disabled");
     $('#msg').html('File loaded!');
     $('#msg').addClass("alert-success");
+  
   } else {
     $('#msg').html('File not supported!');
     $('#msg').addClass("alert-danger");

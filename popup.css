@@ -14,12 +14,11 @@ body {
   margin: 0;
   padding: 5px;
 }
-/*
-textarea {
-  height: 80ex;
-  width: 40em;
+#url-div {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
 }
-*/
 
 #url-list {
     display: none;
