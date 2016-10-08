@@ -7,6 +7,18 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
+/* Google Analytics Code */
+var _AnalyticsCode = 'UA-81857152-2';
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', _AnalyticsCode]);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = 'https://ssl.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
 
 function list(tabs) {
   var contents = '';
@@ -25,6 +37,8 @@ function create_table(contents) {
 }
 
 document.getElementById("generate").addEventListener('click', function(e) {
+  /* Google Analytics Code */
+  _gaq.push(['_trackEvent', e.target.id, 'clicked']);
   chrome.tabs.getAllInWindow(null, list);
   $('#copy').removeClass("disabled");
   $('#save').removeClass("disabled");
@@ -33,6 +47,8 @@ document.getElementById("generate").addEventListener('click', function(e) {
 });
 
 document.getElementById("copy").addEventListener('click', function(e) {
+  /* Google Analytics Code */
+  _gaq.push(['_trackEvent', e.target.id, 'clicked']);
   /* code here to copy, use a invisible textarea */
   var textarea = $('#url-list');
   textarea.focus();
@@ -48,6 +64,8 @@ document.getElementById("copy").addEventListener('click', function(e) {
 });
 
 document.getElementById("load").addEventListener('change', function(e) {
+  /* Google Analytics Code */
+  _gaq.push(['_trackEvent', e.target.id, 'clicked']);
   var file = document.getElementById("load").files[0];
   var textType = /text.*/;
   if (file.type.match(textType)) {
@@ -75,6 +93,8 @@ document.getElementById("load").addEventListener('change', function(e) {
 });
 
 document.getElementById("save").addEventListener('click', function(e) {
+  /* Google Analytics Code */
+  _gaq.push(['_trackEvent', e.target.id, 'clicked']);
   var textToSave = $("#url-list").val();
   var textToSaveAsBlob = new Blob([textToSave], {
     type: "text/plain"
