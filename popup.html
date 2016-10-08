@@ -8,8 +8,8 @@
 <body>
 <div class="container">
   <div class='row' align="center">
-    <button type="button" id="generate" class="btn btn-primary" aria-label="Left Align">
-        <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> Generate
+    <button type="button" id="generate" class="btn btn-primary" aria-label="Generate">
+        <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Generate
     </button>
     <button type="button" id="copy" class="btn btn-primary disabled" aria-label="Copy">
         <span class="glyphicon glyphicon-copy" aria-hidden="true"></span> Copy
@@ -21,6 +21,17 @@
     <button type="button" id="save" class="btn btn-primary disabled" aria-label="Save">
         <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Save
     </button>
+    <button type="button" id="donate" class="btn btn-primary" aria-label="Left Align" data-toggle="modal" data-target="#donateModal">
+        <span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span> Donate
+    </button>
+    <div id="donateModal"class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Donate Modal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <img src="1Yuan.jpg">
+        </div>
+      </div>
+    </div>
+
   </div>
   <div class="alert" id='msg'></div>
   <div id="url-div">
