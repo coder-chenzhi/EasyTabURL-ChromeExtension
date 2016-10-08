@@ -1,5 +1,5 @@
-# TabManager-ChromeExtension
-Conveniently manage your opened tab 
+# EasyTabURL-ChromeExtension
+Help you operate tabs' url more conveniently
 
 ## Features
 - get all tabs' urls
