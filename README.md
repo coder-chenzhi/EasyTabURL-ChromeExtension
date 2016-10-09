@@ -8,7 +8,7 @@ Help you operate tabs' url more conveniently
 - read local file and open all urls in the file(file generated from 'save' function)
 
 ## Todo
-- [ ] fix wrong month in saved file's name bug [Issue #1](https://github.com/coder-chenzhi/EasyTabURL-ChromeExtension/issues/1)
+- [x] fix wrong month in saved file's name bug [Issue #1](https://github.com/coder-chenzhi/EasyTabURL-ChromeExtension/issues/1)
 - [ ] change extension description, give more detail for what this extension can do
 - [ ] add tab titles
 - [ ] adjust popup window's height according to the table's height until reach the max height
