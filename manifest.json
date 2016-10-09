@@ -1,6 +1,6 @@
 {
-   "name": "EasyTabURL",
-   "version": "0.1",
+   "name": "Easy Tab URL",
+   "version": "0.2",
    "description": "Help you operate tabs' url more conveniently",
    "browser_action": {
       "default_icon": "16.png",
