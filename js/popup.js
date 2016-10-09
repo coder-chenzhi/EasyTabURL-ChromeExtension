@@ -31,8 +31,9 @@ function list(tabs) {
 
 function create_table(contents) {
   urls = contents.split('\n');
-  for (var i = urls.length - 1; i >= 0; i--) {
-    $('#url-table').append('<tr><td>' + urls[i] +'</td></tr>');
+  for (var i = 0; i <= urls.length - 2; i++) {
+    // i <= urls.length - 2, because the last element is '\n'
+    $('#url-table > tbody').append('<tr><td>' + urls[i] +'</td></tr>');
   };
 }
 
