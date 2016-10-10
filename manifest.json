@@ -1,15 +1,15 @@
 {
    "name": "Easy Tab URL",
-   "version": "0.3.1",
-   "description": "Help you operate tabs' url more conveniently",
+   "version": "0.3.2",
+   "description": "Allow you get all tab's url, save to local file system, load all urls from file, etc.",
    "browser_action": {
-      "default_icon": "16.png",
+      "default_icon": "images/16.png",
       "default_popup": "popup.html"
    },
    "icons": {
-      "16": "16.png",
-      "48": "48.png",
-      "128": "128.png"
+      "16": "images/16.png",
+      "48": "images/48.png",
+      "128": "images/128.png"
    },
    "permissions": [
       "tabs"
