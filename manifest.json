@@ -1,6 +1,6 @@
 {
    "name": "Easy Tab URL",
-   "version": "0.3.2",
+   "version": "0.3.3",
    "description": "Allow you get all tab's url, save to local file system, load all urls from file, etc.",
    "browser_action": {
       "default_icon": "images/16.png",

@@ -14,9 +14,12 @@ _gaq.push(['_setAccount', _AnalyticsCode]);
 _gaq.push(['_trackPageview']);
 
 (function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
+  ga.async = true;
   ga.src = 'https://ssl.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s);
 })();
 
 
@@ -33,7 +36,7 @@ function create_table(contents) {
   urls = contents.split('\n');
   for (var i = 0; i <= urls.length - 2; i++) {
     // i <= urls.length - 2, because the last element is '\n'
-    $('#url-table > tbody').append('<tr><td>' + urls[i] +'</td></tr>');
+    $('#url-table > tbody').append('<tr><td>' + urls[i] + '</td></tr>');
   };
 }
 
@@ -53,9 +56,9 @@ document.getElementById("copy").addEventListener('click', function(e) {
   /* code here to copy, use a invisible textarea */
   var textarea = $('#url-list');
   textarea.focus();
+  textarea.select();
   var result = document.execCommand('copy');
   if (result) {
-    textarea.select();
     $('#msg').html('Copied to clipboard(Chrome Only!)!');
     $('#msg').addClass("alert-success");
   } else {
@@ -77,7 +80,9 @@ document.getElementById("load").addEventListener('change', function(e) {
       create_table(reader.result);
       urls = reader.result.split('\n');
       for (var i = urls.length - 1; i >= 0; i--) {
-        chrome.tabs.create({ url: urls[i] });
+        chrome.tabs.create({
+          url: urls[i]
+        });
       };
     }
 
@@ -86,7 +91,7 @@ document.getElementById("load").addEventListener('change', function(e) {
     $('#save').removeClass("disabled");
     $('#msg').html('File loaded!');
     $('#msg').addClass("alert-success");
-  
+
   } else {
     $('#msg').html('File not supported!');
     $('#msg').addClass("alert-danger");
@@ -105,7 +110,7 @@ document.getElementById("save").addEventListener('click', function(e) {
   var downloadLink = document.createElement("a");
   var date = new Date();
 
-  downloadLink.download = "URLs_" + date.getFullYear() + "_" + (date.getMonth()+1) + "_" + date.getDate() + ".txt";
+  downloadLink.download = "URLs_" + date.getFullYear() + "_" + (date.getMonth() + 1) + "_" + date.getDate() + ".txt";
   downloadLink.innerHTML = "Download File";
   downloadLink.href = textToSaveAsURL;
   downloadLink.style.display = "none";
@@ -114,13 +119,12 @@ document.getElementById("save").addEventListener('click', function(e) {
   downloadLink.click();
 });
 
-$('#donateModal').on('hidden.bs.modal', function (e) {
+$('#donateModal').on('hidden.bs.modal', function(e) {
   $('body').css("height", "");
 })
 
-$('#donateModal').on('show.bs.modal', function (e) {
+$('#donateModal').on('show.bs.modal', function(e) {
   console.log("triggered!");
   var max_height = $('body').css("max-height");
   $('body').css("height", max_height);
 })
-

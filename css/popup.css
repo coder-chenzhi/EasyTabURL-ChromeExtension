@@ -21,5 +21,11 @@ body {
 }
 
 #url-list {
-    display: none;
+  position: absolute;
+  left: -10000px;
+  outline: none;
+  margin: none;
+  border: none;
+  width: 0px;
+  height: 0px;
 }
