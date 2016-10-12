@@ -13,7 +13,9 @@ Help you operate tabs' url more conveniently
 
 ## Todo
 - [x] fix wrong month in saved file's name bug [Issue #1](https://github.com/coder-chenzhi/EasyTabURL-ChromeExtension/issues/1)
-- [ ] change extension description, give more detail for what this extension can do
+- [x] change extension description, give more detail for what this extension can do
 - [ ] add tab titles
 - [x] adjust popup window's height according to the table's height until reach the max height
 - [ ] add paypal donation and change donation approach automatically according to users' location [Issue #2](https://github.com/coder-chenzhi/EasyTabURL-ChromeExtension/issues/2)
+- [ ] handle when the local file's content is not what we want(invalide url etc.).
+- [ ] security strategy. 'load' button will open all url in local file, what if the url is unsafe

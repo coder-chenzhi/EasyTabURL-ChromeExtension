@@ -59,7 +59,7 @@ document.getElementById("copy").addEventListener('click', function(e) {
   textarea.select();
   var result = document.execCommand('copy');
   if (result) {
-    $('#msg').html('Copied to clipboard(Chrome Only!)!');
+    $('#msg').html('Copied to clipboard!');
     $('#msg').addClass("alert-success");
   } else {
     $('#msg').html('Error copying to clipboard!');
