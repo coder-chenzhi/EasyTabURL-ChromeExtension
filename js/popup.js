@@ -26,7 +26,7 @@ _gaq.push(['_trackPageview']);
 function list(tabs) {
   var contents = '';
   for (var i = 0; i < tabs.length; i++) {
-    contents += tabs[i].url + '\n';
+    contents += tabs[i].title + '\t' + tabs[i].url + '\n';
   }
   $('#url-list').val(contents);
   create_table(contents);
@@ -36,7 +36,7 @@ function create_table(contents) {
   urls = contents.split('\n');
   for (var i = 0; i <= urls.length - 2; i++) {
     // i <= urls.length - 2, because the last element is '\n'
-    $('#url-table > tbody').append('<tr><td>' + urls[i] + '</td></tr>');
+    $('#url-table > tbody').append('<tr><td>' + urls[i].split('\t')[0] + '</td><td>' + urls[i].split('\t')[1] + '</td></tr>');
   };
 }
 
@@ -80,9 +80,16 @@ document.getElementById("load").addEventListener('change', function(e) {
       create_table(reader.result);
       urls = reader.result.split('\n');
       for (var i = 0; i < urls.length; i++) {
-        chrome.tabs.create({
-          url: urls[i]
-        });
+        if (urls[i].includes('\t')) {
+          var elements = urls[i].split('\t')
+          chrome.tabs.create({
+            url: elements[elements.length - 1]
+          });
+        } else {
+          chrome.tabs.create({
+            url: urls[i]
+          });
+        }
       };
     }
 
