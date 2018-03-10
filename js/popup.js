@@ -79,7 +79,7 @@ document.getElementById("load").addEventListener('change', function(e) {
       $('#url-list').val(reader.result);
       create_table(reader.result);
       urls = reader.result.split('\n');
-      for (var i = urls.length - 1; i >= 0; i--) {
+      for (var i = 0; i < urls.length; i++) {
         chrome.tabs.create({
           url: urls[i]
         });
