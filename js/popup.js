@@ -117,7 +117,8 @@ document.getElementById("save").addEventListener('click', function(e) {
   var downloadLink = document.createElement("a");
   var date = new Date();
 
-  downloadLink.download = "URLs_" + date.getFullYear() + "_" + (date.getMonth() + 1) + "_" + date.getDate() + ".txt";
+  downloadLink.download = "URLs_" + date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + "_" + 
+                              date.getHours() + "-" + date.getMinutes() + "-" + date.getSeconds() + ".txt";
   downloadLink.innerHTML = "Download File";
   downloadLink.href = textToSaveAsURL;
   downloadLink.style.display = "none";
