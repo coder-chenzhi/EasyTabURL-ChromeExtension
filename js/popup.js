@@ -78,19 +78,18 @@ document.getElementById("load").addEventListener('change', function(e) {
     reader.onload = function(e) {
       $('#url-list').val(reader.result);
       create_table(reader.result);
-      urls = reader.result.split('\n');
-      for (var i = 0; i < urls.length; i++) {
-        if (urls[i].includes('\t')) {
-          var elements = urls[i].split('\t')
-          chrome.tabs.create({
-            url: elements[elements.length - 1]
-          });
+      lines = reader.result.split('\n');
+      var urls = [];
+      for (var i = 0; i < lines.length; i++) {
+        // check the file format
+        if (lines[i].includes('\t')) {
+          var elements = lines[i].split('\t');
+          urls.push(elements[elements.length - 1]);
         } else {
-          chrome.tabs.create({
-            url: urls[i]
-          });
+          urls.push(lines[i]);
         }
       };
+      chrome.windows.create({url:urls, type: 'normal', focused: true} ,null)
     }
 
     reader.readAsText(file);
