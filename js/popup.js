@@ -126,12 +126,7 @@ document.getElementById("save").addEventListener('click', function(e) {
   downloadLink.click();
 });
 
-$('#donateModal').on('hidden.bs.modal', function(e) {
-  $('body').css("height", "");
-})
-
-$('#donateModal').on('show.bs.modal', function(e) {
-  console.log("triggered!");
-  var max_height = $('body').css("max-height");
-  $('body').css("height", max_height);
-})
+document.getElementById("options").addEventListener("click", () =>
+{
+  chrome.tabs.create({ url: "src/options_custom/index.html" });
+});
