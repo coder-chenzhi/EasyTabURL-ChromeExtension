@@ -2,133 +2,57 @@
 this.manifest = {
     "name": "My Extension",
     "icon": "icon.png",
-    "settings": [
-        {
-            "tab": i18n.get("information"),
-            "group": i18n.get("login"),
-            "name": "username",
+    "settings": [{
+            "tab": i18n.get("settings"),
+            "group": i18n.get("formatting"),
+            "name": "template",
             "type": "text",
-            "label": i18n.get("username"),
-            "text": i18n.get("x-characters")
+            "label": i18n.get("template"),
+            "text": ""
         },
         {
-            "tab": i18n.get("information"),
-            "group": i18n.get("login"),
-            "name": "password",
-            "type": "text",
-            "label": i18n.get("password"),
-            "text": i18n.get("x-characters-pw"),
-            "masked": true
-        },
-        {
-            "tab": i18n.get("information"),
-            "group": i18n.get("login"),
-            "name": "myDescription",
+            "tab": i18n.get("settings"),
+            "group": i18n.get("formatting"),
+            "name": "templateDesc",
             "type": "description",
-            "text": i18n.get("description")
+            "text": i18n.get("templateDesc")
         },
         {
-            "tab": i18n.get("information"),
-            "group": i18n.get("logout"),
-            "name": "myCheckbox",
-            "type": "checkbox",
-            "label": i18n.get("enable")
+            "tab": i18n.get("settings"),
+            "group": i18n.get("filtering"),
+            "name": "whiteList",
+            "type": "textarea",
+            "label": i18n.get("whiteList"),
+            "text": ""
         },
         {
-            "tab": i18n.get("information"),
-            "group": i18n.get("logout"),
-            "name": "myButton",
-            "type": "button",
-            "label": i18n.get("disconnect"),
-            "text": i18n.get("logout")
+            "tab": i18n.get("settings"),
+            "group": i18n.get("filtering"),
+            "name": "blackList",
+            "type": "textarea",
+            "label": i18n.get("blackList"),
+            "text": ""
         },
         {
-            "tab": "Details",
-            "group": "Sound",
-            "name": "noti_volume",
-            "type": "slider",
-            "label": "Notification volume:",
-            "max": 1,
-            "min": 0,
-            "step": 0.01,
-            "display": true,
-            "displayModifier": function (value) {
-                return (value * 100).floor() + "%";
-            }
+            "tab": i18n.get("settings"),
+            "group": i18n.get("filtering"),
+            "name": "filteringDesc",
+            "type": "description",
+            "text": i18n.get("filteringDesc")
         },
         {
-            "tab": "Details",
-            "group": "Sound",
-            "name": "sound_volume",
-            "type": "slider",
-            "label": "Sound volume:",
-            "max": 100,
-            "min": 0,
-            "step": 1,
-            "display": true,
-            "displayModifier": function (value) {
-                return value + "%";
-            }
+            "tab": i18n.get("help"),
+            "group": i18n.get("support"),
+            "name": "supportDesc",
+            "type": "description",
+            "text": i18n.get("supportDesc")
         },
         {
-            "tab": "Details",
-            "group": "Food",
-            "name": "myPopupButton",
-            "type": "popupButton",
-            "label": "Soup 1 should be:",
-            "options": {
-                "groups": [
-                    "Hot", "Cold",
-                ],
-                "values": [
-                    {
-                        "value": "hot",
-                        "text": "Very hot",
-                        "group": "Hot",
-                    },
-                    {
-                        "value": "Medium",
-                        "group": 1,
-                    },
-                    {
-                        "value": "Cold",
-                        "group": 2,
-                    },
-                    ["Non-existing"]
-                ],
-            },
-        },
-        {
-            "tab": "Details",
-            "group": "Food",
-            "name": "myListBox",
-            "type": "listBox",
-            "label": "Soup 2 should be:",
-            "options": [
-                ["hot", "Hot and yummy"],
-                ["cold"]
-            ]
-        },
-        {
-            "tab": "Details",
-            "group": "Food",
-            "name": "myRadioButtons",
-            "type": "radioButtons",
-            "label": "Soup 3 should be:",
-            "options": [
-                ["hot", "Hot and yummy"],
-                ["cold"]
-            ]
+            "tab": i18n.get("help"),
+            "group": i18n.get("get in touch"),
+            "name": "touchDesc",
+            "type": "description",
+            "text": i18n.get("touchDesc")
         }
-    ],
-    "alignment": [
-        [
-            "username",
-            "password"
-        ],
-        [
-            "noti_volume",
-            "sound_volume"
-        ]
     ]
 };

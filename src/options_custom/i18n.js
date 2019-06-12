@@ -2,70 +2,66 @@
 this.i18n = {
     "settings": {
         "en": "Settings",
-        "de": "Optionen"
+        "zh-cn": "选项"
     },
     "search": {
         "en": "Search",
-        "de": "Suche"
+        "zh-cn": "搜索"
     },
-    "nothing-found": {
-        "en": "No matches were found.",
-        "de": "Keine Übereinstimmungen gefunden."
+    "formatting": {
+        "en": "Formatting",
+        "zh-cn": "格式化"
     },
-    
-    
-    
-    "information": {
-        "en": "Information",
-        "de": "Information"
+    "template" : {
+        "en": "Template",
+        "zh-cn": "模板"
     },
-    "login": {
-        "en": "Login",
-        "de": "Anmeldung"
+    "templateDesc" : {
+        "en": "Usage of template: <br> \
+        "
+        ,
+        "zh-cn": "如何使用模板："
     },
-    "username": {
-        "en": "Username:",
-        "de": "Benutzername:"
+    "filtering" : {
+        "en": "Filtering",
+        "zh-cn": "过滤"
     },
-    "password": {
-        "en": "Password:",
-        "de": "Passwort:"
+    "whiteList" : {
+        "en": "White List<br>",
+        "zh-cn": "白名单<br>"
     },
-    "x-characters": {
-        "en": "6 - 12 characters",
-        "de": "6 - 12 Zeichen"
+    "blackList" : {
+        "en": "Black List<br>",
+        "zh-cn": "黑名单<br>"
     },
-    "x-characters-pw": {
-        "en": "10 - 18 characters",
-        "de": "10 - 18 Zeichen"
+    "help" : {
+        "en": "Help",
+        "zh-cn": "帮助"
     },
-    "description": {
-        "en": "This is a description. You can write any text inside of this.<br>\
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut\
-        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores\
-        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem\
-        ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\
-        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.\
-        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-        
-        "de": "Das ist eine Beschreibung. Du kannst hier beliebigen Text einfügen.<br>\
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut\
-        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores\
-        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem\
-        ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\
-        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.\
-        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+    "support" : {
+        "en": "Support",
+        "zh-cn": "支持"
     },
-    "logout": {
-        "en": "Logout",
-        "de": "Abmeldung"
+    "get in touch" : {
+        "en": "Get in Touch",
+        "zh-cn": "联系我们"
     },
-    "enable": {
-        "en": "Enable",
-        "de": "Aktivieren"
+    "filteringDesc" : {
+        "en": "Usage of filter: <br> \
+        "
+        ,
+        "zh-cn": "如何使用过滤器："
     },
-    "disconnect": {
-        "en": "Disconnect:",
-        "de": "Trennen:"
+    "supportDesc" : {
+        "en": "Usage of template: <br> \
+        "
+        ,
+        "zh-cn": "如何使用模板："
+    },
+    "touchDesc" : {
+        "en": "Usage of template: <br> \
+        "
+        ,
+        "zh-cn": "联系我们："
     }
 };
